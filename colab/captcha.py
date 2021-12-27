@@ -71,7 +71,7 @@ EPOCHS = 120
 
 def get_model():
     m = Sequential([
-      layers.experimental.preprocessing.Rescaling(1./255, name=""),
+      layers.experimental.preprocessing.Rescaling(1./255, name="rescaling"),
 
       layers.Conv2D(32, (3, 3), padding="same", input_shape=(IMG_HEIGHT, IMG_WIDTH, 1)),
       layers.MaxPooling2D(pool_size=(2, 2), strides=(2, 2)),
